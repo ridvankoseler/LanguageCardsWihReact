@@ -1,9 +1,18 @@
-import React from 'react'
+import './Item.css'
 
-const Item = () => {
+const Item = ({ card }) => {
+  
+  const { name, img, options } = card;
+  // console.log(name);
+  // console.log(img)
+  // console.log(options);
   return (
-    <div>Item</div>
-  )
-}
+    <div className="card">
+        <img className="card-logo" src={img} alt='' />
+        <h3 className="card-title">{name}</h3>
+      
+    </div>
+  );
+};
 
-export default Item
+export default Item;
